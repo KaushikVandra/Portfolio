@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0e14;
+  --bg-elevated: #111820;
+  --bg-card: #151c26;
+  --fg: #e6edf3;
+  --fg-muted: #8b949e;
+  --accent: #39ff14;
+  --accent-dim: #39ff1433;
+  --border: #21262d;
+  --terminal-green: #39ff14;
+  --scanline: rgba(57, 255, 20, 0.03);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-body: var(--font-inter);
+}
+
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --fg: #0d1117;
+  --fg-muted: #656d76;
+  --accent: #0969da;
+  --accent-dim: #0969da22;
+  --border: #d0d7de;
+  --terminal-green: #1a7f37;
+  --scanline: rgba(9, 105, 218, 0.02);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--scanline) 2px,
+    var(--scanline) 4px
+  );
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--fg) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.terminal-border {
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px var(--accent-dim), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
