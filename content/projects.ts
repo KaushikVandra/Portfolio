@@ -21,22 +21,22 @@ export const projects: Project[] = [
   {
     slug: "handwriting-analysis-portal",
     title: "Handwriting Analysis Portal",
-    tagline: "AI-powered analysis platform with payments & monorepo architecture",
-    role: "Lead Full Stack Developer",
-    duration: "8 months",
-    outcome: "2,000+ active users · 99.9% uptime",
+    tagline: "Handwriting analysis platform with payments & monorepo architecture",
+    role: "Full Stack Developer",
+    duration: "15 months",
+    outcome: "99.9% uptime · Scalable architecture",
     description:
-      "A full-featured SaaS portal for handwriting analysis with user dashboards, payment processing, and real-time analysis results. Built as an NX monorepo with shared type-safe libraries across frontend and backend.",
+      "A full-stack platform enabling graphologists to evaluate handwriting samples and auto-generate personalised PDF/Word reports for end users.",
     problem:
-      "The client needed a scalable platform to deliver handwriting analysis as a paid service — with user accounts, secure payments, analysis history, and admin tooling. The existing prototype couldn't handle growth or maintain code quality across teams.",
+      "Graphologists needed a scalable platform to deliver handwriting analysis as a paid service — with user accounts, secure payments, analysis history, and admin tooling. The existing prototype couldn't handle growth or maintain code quality across teams.",
     approach:
-      "I architected an NX monorepo separating the React frontend, NestJS API, and shared libraries. State management used Zustand for UI state and TanStack Query for server state with optimistic updates. MongoDB handled flexible document storage for analysis results. Razorpay integration covered subscriptions and one-time payments with webhook-driven fulfillment.",
+      "I architected an NX monorepo separating the React frontend, NestJS API, and shared libraries. State management used Zustand for UI state and TanStack Query for server state with optimistic updates. MongoDB handled flexible document storage for analysis results. Razorpay integration covered subscriptions and one-time payments with webhook-driven fulfillment. Developed an admin panel managing users, graphologists, and trait combinations.",
     stack: ["React.js", "NestJS", "Zustand", "TanStack Query", "MongoDB", "Razorpay", "NX Monorepo"],
     result:
-      "Launched to 2,000+ active users with 99.9% uptime. The monorepo reduced duplicate code by 60% and enabled parallel frontend/backend development. Payment conversion improved 25% after checkout flow optimization.",
+      "Delivered a production-ready platform with 99.9% uptime. The monorepo reduced duplicate code by 60% and enabled parallel frontend/backend development. Payment conversion improved 25% after checkout flow optimization.",
     lessons:
       "Monorepo tooling pays off early when types are shared across boundaries. Investing in TanStack Query's cache invalidation strategy upfront prevented countless stale-data bugs in production.",
-    keywords: ["React", "NestJS", "MongoDB", "SaaS", "Full Stack"],
+    keywords: ["React", "NestJS", "MongoDB", "Full Stack"],
     datePublished: "2024-06-01",
     featured: true,
     gradient: "from-emerald-500/20 to-cyan-500/20",
@@ -47,16 +47,16 @@ export const projects: Project[] = [
     tagline: "Headless CMS migration with blazing-fast static delivery",
     role: "Full Stack Developer",
     duration: "4 months",
-    outcome: "95+ Lighthouse score · 3× faster page loads",
+    outcome: "~40% performance improvement · Top Lighthouse scores",
     description:
-      "Complete rebuild of a corporate website migrating from a slow WordPress monolith to Gatsby.js with headless WordPress CMS — delivering sub-second page loads and a modern content editing experience for the marketing team.",
+      "Architected a headless CMS static site using Gatsby.js + WordPress/GraphQL, improving site performance by ~40% and achieving top Lighthouse scores.",
     problem:
-      "The existing WordPress site loaded in 6+ seconds, scored poorly on Core Web Vitals, and frustrated both visitors and content editors. SEO rankings were declining due to performance penalties.",
+      "The existing WordPress site loaded slowly, scored poorly on Core Web Vitals, and frustrated both visitors and content editors. SEO rankings were declining due to performance penalties.",
     approach:
-      "I implemented Gatsby.js as the static site generator pulling content via GraphQL from headless WordPress. Image optimization, code splitting, and CDN delivery were configured from day one. Custom Gatsby plugins bridged WordPress ACF fields to typed GraphQL queries.",
-    stack: ["Gatsby.js", "WordPress CMS", "GraphQL", "TypeScript", "Tailwind CSS"],
+      "I implemented Gatsby.js as the static site generator pulling content via GraphQL from headless WordPress. Image optimization, code splitting, and CDN delivery were configured from day one. Implemented lazy loading, build-time optimisations, and responsive design; ensured seamless content updates for non-technical editors.",
+    stack: ["Gatsby.js", "WordPress CMS", "GraphQL", "JavaScript", "HTML5", "SCSS"],
     result:
-      "Achieved 95+ Lighthouse scores across all metrics. Page load times dropped from 6s to under 1.5s — a 3× improvement. Organic traffic increased 35% within three months post-launch.",
+      "Achieved top Lighthouse scores across all metrics. Site performance improved by ~40%. Organic traffic increased within months post-launch.",
     lessons:
       "Headless CMS gives editors flexibility without sacrificing frontend performance. GraphQL's query efficiency matters when pages aggregate content from multiple WordPress post types.",
     keywords: ["Gatsby.js", "GraphQL", "WordPress", "Performance", "SEO"],
@@ -67,17 +67,17 @@ export const projects: Project[] = [
   {
     slug: "patient-mentoring-platform",
     title: "Patient Mentoring Platform",
-    tagline: "Healthcare mentorship with serverless backend",
+    tagline: "Healthcare SaaS platform with real-time mentorship",
     role: "Full Stack Developer",
-    duration: "6 months",
-    outcome: "500+ mentor sessions · HIPAA-aware architecture",
+    duration: "10 months",
+    outcome: "500+ mentor sessions · 70% cost reduction",
     description:
-      "A Next.js platform connecting patients with mentors for guided health journeys. AWS Lambda powers the API layer with PostgreSQL for relational data — designed for scalability and cost efficiency.",
+      "A Next.js SaaS platform integrating real-time chat, video calling, and profile-based mentor matching for surgery patients.",
     problem:
       "Healthcare mentors needed a reliable platform to schedule sessions, track patient progress, and manage communications — without the overhead of always-on servers. Data privacy requirements demanded careful architecture.",
     approach:
-      "Built the frontend with Next.js App Router for SSR and SEO. AWS Lambda functions handled API routes with connection pooling to PostgreSQL via RDS Proxy. Role-based access control separated mentor, patient, and admin views. Real-time notifications used SNS with email fallbacks.",
-    stack: ["Next.js", "AWS Lambda", "PostgreSQL", "TypeScript", "Tailwind CSS"],
+      "Integrated real-time chat, video calling, and profile-based mentor matching into an existing production platform used by surgery patients. Deployed serverless AWS Lambda backend integration and optimised frontend bundle size, improving load performance for mobile users. PostgreSQL for relational data — designed for scalability and cost efficiency.",
+    stack: ["Next.js", "AWS Lambda", "PostgreSQL", "REST APIs", "TypeScript"],
     result:
       "Facilitated 500+ mentor sessions in the first quarter. Serverless architecture reduced infrastructure costs by 70% compared to EC2 estimates. Platform maintained 99.5% availability during peak usage.",
     lessons:

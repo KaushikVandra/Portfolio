@@ -14,11 +14,10 @@ export const siteConfig = {
   },
   jobTitle: "Full Stack Developer",
   yearsExperience: 3,
-  email: "hello@kaushikvandra.dev",
+  email: "vandrakaushik2002@gmail.com",
   social: {
     github: "https://github.com/kaushikvandra",
-    linkedin: "https://linkedin.com/in/kaushikvandra",
-    twitter: "https://twitter.com/kaushikvandra",
+    linkedin: "https://linkedin.com/in/kaushik-vandra",
   },
   knowsAbout: [
     "React.js",

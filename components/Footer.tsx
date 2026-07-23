@@ -27,7 +27,7 @@ export function Footer() {
         </nav>
 
         <p className="font-mono text-xs text-[var(--fg-muted)]">
-          © {year} {siteConfig.name}. Built with Next.js.
+          © {year} {siteConfig.name}.
         </p>
       </div>
     </footer>
